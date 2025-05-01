@@ -14,3 +14,13 @@ document.body.appendChild(newDiv);
 const newSection=document.createElement('section');
 newSection.innerHTML="<h2>Dom Basics</h2><p>This was added through Javascript!</p>";
 document.body.appendChild(newSection);
+
+//add an element (replace if occupied)
+const container = document.getElementById("Contatainer");
+container.innerHTML = "<p>This is new paragraph content</p>";
+
+//change attribute
+//set
+element.setAttribute('src', 'new-image.jpg');
+
+

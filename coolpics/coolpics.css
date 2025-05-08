@@ -65,6 +65,8 @@ img {
 }
 footer{
     background-color: var(--primary-color);
+    text-align: left;
+    padding-left: 20%;
 }
 @media screen and (min-width: 700px) {
     .gallery {
@@ -88,5 +90,9 @@ footer{
     }
     a{
         display: inline-flex;
+        padding: 0 5%;
+    }
+    button{
+        display: none;
     }
 }

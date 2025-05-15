@@ -68,15 +68,12 @@ footer{
     text-align: left;
     padding-left: 20%;
 }
+.hide{
+    display: none;
+}
 @media screen and (min-width: 700px) {
     .gallery {
         grid-template-columns: 1fr 1fr;
-    }
-    header {
-        display: block;
-    }
-    a{
-        display: none;
     }
 }
 

@@ -3,8 +3,10 @@ const menu=document.querySelector(".menu");
 
 function toggleMenu() {
     menu.classList.toggle("hide");
-    menuButton.classList.toggle('hide');
 }
+
+
+menuButton.addEventListener("click", toggleMenu);
 
 function handleResize(){
     if (window.innerWidth>1000){
@@ -16,24 +18,40 @@ function handleResize(){
 
 handleResize();
 
-menuButton.addEventListener("click", toggleMenu);
-
 window.addEventListener("resize", handleResize)
 
+//////////////////////////////////////////////////////////////
+const gallery=document.querySelector('.gallery');
+
 gallery.addEventListener('click', (event)=>{
-    modalimage.alt = alt;
-    modal.showModal();
-})
+    if (event.target.matches('img')) {
+        const modal = document.createElement('dialog');
+        modal.innerHTML =
+        '<img id="modalImage" src="" alt=""><button id="closeButton">X</button>';
+        document.body.appendChild(modal);
 
+        const modalImage=modal.querySelector('#modalImage')
+        const closeButton=modal.querySelector('#closeButton')
+          
+        const origSrc=event.target.src;
+        const base=origSrc.split('-')[0];
+        const fullSrc=base+'-full.jpeg';
 
-//close modal on button click
-closeButton.addEventListener('click', ()=>{
-    modal.close();
-})
+        modalImage.src=fullSrc;
+        modalImage.alt=event.target.alt
+        modal.showModal();
 
-//close modal if clicking outside the image
-modal.addEventListener('click', (event)=>{
-    if (event.taget === modal){
+        //close modal on button click
+        closeButton.addEventListener('click', ()=>{
         modal.close();
+        modal.remove();
+        })
+        //close modal if clicking outside the image
+        modal.addEventListener('click', (event)=>{
+            if (event.target === modal){
+                modal.close();
+                modal.remove();
+            }
+        });
     }
-}) 
+});

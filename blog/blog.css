@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+:root{
+    --primary-color: #EFC69B;
+    --secondary-color: #AF1B3F;
+    --dark-color: #473144;
+    --body-font:Helvetica, Arial, sans-serif;
+    --headline-font:'Lora', Impact, serif
+}
+nav > ul{
+    display: grid;
+    grid-template-columns:12fr 1fr 1fr 1fr;
+    justify-content: end;
+    justify-items: end;
+    border-top:var(--primary-color) 2px solid;
+    border-bottom:var(--primary-color) 2px solid;
+    padding:20px;
+    font-size: 1.4em;
+    list-style: none;
+    padding-left: 0;
+}
+h1{
+    text-align: center;
+    font-family: var(--headline-font);
+    color:#473144;
+    font-size: 3em;
+}
+h2{
+    font-family: var(--headline-font);
+    color: var(--dark-color);
+    font-size: 1.4em;
+}
+h3{
+    font-family: var(--headline-font);
+    color: var(--dark-color);
+    font-size: 2em;
+}
+body{
+        font-family: var(--body-font);
+}
+#books{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+    padding:20px;
+    align-items: stretch;
+}
+#attributes{
+    display:block;
+    align-self: start;
+    grid-column: 1/2;
+    text-align: right;
+    padding: 50px;
+}
+#book{
+    display: block;
+    text-align: left;
+    grid-column: 2/3;
+    padding:50px;
+    border-left: var(--primary-color) 2px solid;
+}
+#filter{
+    display:block;
+    border:var(--primary-color) 2px solid;
+    grid-column: 3/4;
+    margin-right: 100px;
+    padding:50px;
+    height:100%;
+}
+img{
+    width:80%;
+    justify-self: center;
+}

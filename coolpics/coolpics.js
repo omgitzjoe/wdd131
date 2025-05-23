@@ -25,6 +25,7 @@ const gallery=document.querySelector('.gallery');
 
 gallery.addEventListener('click', (event)=>{
     if (event.target.matches('img')) {
+        //create modal and append
         const modal = document.createElement('dialog');
         modal.innerHTML =
         '<img id="modalImage" src="" alt=""><button id="closeButton">X</button>';

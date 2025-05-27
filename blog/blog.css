@@ -52,16 +52,14 @@ body{
     padding:20px;
     align-items: stretch;
 }
-#attributes{
+.specs {
+    height:1000px;
+    justify-self: auto;
     display:block;
     align-self: start;
     grid-column: 1/2;
     text-align: right;
     padding: 50px;
-}
-.specs {
-    height:1200px;
-    justify-self: auto;
 }
 #book{
     display: block;
@@ -84,6 +82,7 @@ img{
     display: block;
 }
 .cover {
+    height:1000px;
     margin-bottom: 40px;
     padding-top: 20px;
     padding-bottom: 20px;

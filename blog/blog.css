@@ -71,7 +71,7 @@ body{
     font-size: 1.6em;
 }
 .filter{
-    position:sticky;
+    position:block;
     border:var(--primary-color) 2px solid;
     grid-row: 1 / span 50;
     grid-column: 3/4;

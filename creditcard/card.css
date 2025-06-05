@@ -1,0 +1,118 @@
+#creditCard{
+    display: grid;
+    margin:auto;
+    position:relative;
+    grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(6, auto);
+    justify-items: center;  
+    max-width:500px;
+}
+#cardFront{
+    grid-column:1/4;
+    grid-row:1/5;
+    z-index: 2;
+    gap:10px;
+    display:grid; 
+    background-color: lightgray;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    position:relative;
+    padding:25px;
+    min-width: 350px;   
+    min-height: 200px;
+    max-height:200px;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows:1fr 1fr 1fr;
+    border:1px gold solid;
+    border-radius: 8px;
+}
+#cardBack{
+    grid-column: 2/5;
+    grid-row:2/6;
+    z-index:1;
+    background-color: lightgrey;
+    position: relative;
+    display: grid;
+    min-width: 350px;
+    min-height: 200px;
+    max-height:200px;
+    padding:25px;
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows:4fr 1fr 1fr;
+    border:1px gold solid;
+    border-radius:8px;
+}
+#submit{
+    grid-column: 4;
+    grid-row:6;
+    background-color: lightgrey;
+    height:50px;
+    width:100px;
+    justify-self: end;
+    margin-top: 10px;
+    align-self: start;
+    border-radius:8px;
+}
+#cvc{
+    grid-column: 2;
+    grid-row:3;
+    justify-self: end;
+    align-self: start;
+    max-width: 50px;
+}
+#cvcL{
+    grid-column: 2;
+    grid-row:2;
+    align-self: start;
+}
+#blackStripe{
+    background-color: black;
+    grid-row:1;
+    height:35px;
+    grid-column: 1/3;
+    margin-right: -25px;
+}
+#total{
+    grid-column: 1;
+    grid-row:1;
+    text-align: left;
+    align-self: center;
+
+}
+#cardNum{
+    grid-column: 1/3;
+    grid-row: 2;
+    align-self: center;
+    display:inline-block;
+}
+#cardHolder{
+    grid-column: 1/2;
+    grid-row:3;
+    display:inline-block;
+    align-self:center;
+}
+#expiration{
+    grid-column: 2/3;
+    grid-row:3;
+    display:inline-block;
+    align-self: center;
+}
+#cardImage{
+    grid-column: 2;
+    grid-row: 1;
+    display: inline-block;
+    justify-self: right;
+}
+#expMonth, #expYear
+{
+    max-width: 45px;
+}
+#cardNumber{
+    grid-column: 1/3;
+    width: 100%;
+    display: inline-block;
+}
+#errorMsg{
+    text-align: center;
+    color: red;
+    
+}

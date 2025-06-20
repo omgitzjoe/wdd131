@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipes</title>
+    <meta name="description" content="Recipes">
+    <meta name="author" content="Joe Tolley" >
+    <link rel="stylesheet" type="text/css" href="recipes.css" >
+    <script src="recipes.js" defer></script>
+    <link rel="icon" type="image/webp" href="images/recipe-book.png">
+</head>
+<body>
+    <header>
+        <img src="images/recipe-book.png" id="logo" alt="logo">
+        <h1>RecipeBook</h1>
+    </header>   
+    <main>
+        <form>
+            <input type="search" name="searchbar" placeholder="Find a Recipe" required>
+            <input type="image" src="images/search.svg" alt="magGlass">
+        </form>
+        <hr>
+        <div id="recipe-card">
+            <img src="images/apple-crisp.jpg" alt="apple-crisp">
+            <section class="details">
+                <div id="tags">
+                    <p><b>Dessert</b></p>
+                </div>
+                <div id="nameRate">
+                    <h2>Apple Crisp</h2>
+                    <span class="rating" role="img" aria-label="Rating: 4 out of 5 stars">
+                        <span aria-hidden="true" class="icon-star">⭐</span>
+                        <span aria-hidden="true" class="icon-star">⭐</span>
+                        <span aria-hidden="true" class="icon-star">⭐</span>
+                        <span aria-hidden="true" class="icon-star">⭐</span>
+                        <span aria-hidden="true" class="icon-star-empty">☆</span>
+                    </span>
+                </div>
+                <div id="description">
+                    <p>This apple crisp recipe is a simple yet delicious fall dessert that's great served warm with vanilla ice cream.</p>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <a href="https://www.flaticon.com/free-icons/recipe" id="attribution" title="recipe icons">Recipe icons created by Freepik - Flaticon</a>
+        <div class="social">
+	    <!-- Social media icons provided under CC from https://www.iconfinder.com/AlfredoCreates  -->
+	    <a href="#"><img src="images/instagram_icon.svg" alt="instagram icon"></a>
+	    <a href="#"><img src="images/youtube_icon.svg" alt="youtube icon"></a>
+	    <a href="#"><img src="images/pinterest_icon.svg" alt="pinterest icon"></a>
+        </div>
+    </footer>
+</body>
+</html>

@@ -279,3 +279,81 @@ const recipes = [
 		rating: 4
 	}
 ]
+// initial recipe
+function random(num){
+	return Math.floor(Math.random()*num);
+}
+function getRandomListEntry(list) {
+	const listLength = list.length;
+	const randomNum = random(listLength);
+	return list[randomNum];
+}
+function renderRecipe(recipeList) {
+  recipeContainer.innerHTML = ''; // Clear old results
+  recipeList.forEach(recipe => {
+    recipeContainer.innerHTML += recipeTemplate(recipe);
+  });
+}
+function recipeTemplate(recipe) {
+	return `<div id="recipe-card">
+        	<img src="${recipe.image}" alt="${recipe.name}">
+         	<section class="details">
+            	<div id="tags">${tagsTemplate(recipe.tags)}</div>
+                <div id="nameRate">
+                    <h2>${recipe.name}</h2>
+                    ${ratingTemplate(recipe.rating)}
+                </div>
+                <div id="description">
+                    <p>${recipe.description}</p>
+                </div>
+            </section>
+			</div>`
+}
+function tagsTemplate(tags){
+	return tags.map((tag)=>`<p><b>${tag}</b></p>`).join('');
+}
+function ratingTemplate(rating) {
+	// begin building an html string using the ratings HTML written earlier as a model.
+	let html = `<span class="rating" role="img" aria-label="Rating: ${rating} out of 5 stars">`
+	// our ratings are always out of 5, so create a for loop from 1 to 5
+	for (let i=1; i<=5; i++){
+		if (i <= rating){
+			html +=`<span aria-hidden="true" class="icon-star">⭐</span>`
+		}
+		else {
+			html +=`<span aria-hidden="true" class="icon-star-empty">☆</span>`
+		}
+	}
+	// after the loop, add the closing tag to our string
+	html += `</span>`
+	// return the html string
+	return html
+}
+let recipeContainer=document.querySelector('#recipe-container')
+function init() {
+  // get a random recipe
+  let recipe = getRandomListEntry(recipes)
+  // render the recipe with renderRecipes.
+  renderRecipe([recipe]);
+}
+init();
+function filter(query) {
+  	let filtered = recipes.filter(recipe => {
+    const nameMatch = recipe.name.toLowerCase().includes(query);
+    const descMatch = recipe.description.toLowerCase().includes(query);
+    const tagMatch = recipe.tags.some(tag => tag.toLowerCase().includes(query));
+    return nameMatch || descMatch || tagMatch;
+  });
+  return filtered;
+}
+
+function searchHandler(e) {
+	e.preventDefault()
+	// get the search input
+	let query = document.querySelector('#searchbar').value.toLowerCase();
+  // use the filter function to filter our recipes
+  	let filtered = filter(query);
+  // render the filtered list
+	renderRecipe(filtered);
+}
+document.querySelector('#button').addEventListener('click', searchHandler);

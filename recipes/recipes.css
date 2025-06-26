@@ -39,7 +39,8 @@ body {
     background-color: var(--text-light);
 }
 img {
-    max-width:100%
+    max-width:100%;
+    max-height:100%;
 }
 /* searchbar*/
 form {

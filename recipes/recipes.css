@@ -79,8 +79,10 @@ form input[type="image"] {
     border:black 1px solid;
     background-color: white;
     display:inline-flex;
-    padding:.1em;   
+    padding:.1em; 
+    margin-right: 1em;  
 }
+
 .details{
     display:flex;
     justify-content: space-between;

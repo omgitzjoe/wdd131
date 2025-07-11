@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+:root {
+  --primary-color: #067406;
+  --secondary-color: #ffd700;
+  --accent1-color: #800080;
+  --accent2-color:#ff0000;
+  --heading-font: "Roboto";
+  --paragraph-font: 'Lora';
+  --headline-color-on-white: var(--primary-color);
+  --headline-color-on-color: white;
+  --paragraph-color-on-white: var(--primary-color);
+  --paragraph-color-on-color: white;
+  --paragraph-background-color: var(--primary-color);
+  --nav-link-color: var(--primary-color);
+  --nav-background-color: var(--secondary-color);
+  --nav-hover-link-color: white;
+  --nav-hover-background-color: var(--primary-color);
+}
+/*header stuff */
+
+#title{
+  padding: 2%;
+  display: grid;
+  max-width: 100%;
+  height:auto;
+  grid-template-columns: 1fr 3fr 1fr;
+  align-items: center;
+}
+#logo{
+    justify-self: center;
+    max-width: 90%;
+    height: auto;
+}
+.hero{
+    padding:3%;
+    justify-self: center;
+    position:absolute;
+    z-index: -1;
+    max-width: 100%;
+    height:auto;
+    display:flex;
+}
+#alt{
+    font-size:x-large;
+    max-width:100%;
+    height:auto;
+    grid-column: 3;
+}
+/*main stuff*/
+#page{
+    justify-content: center;
+    align-content: center;
+    display: flexbox;
+}
+a{
+        text-decoration: none;
+        color: #800080;
+}
+#example-images{
+    display:inline-block;
+}

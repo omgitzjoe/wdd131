@@ -12,24 +12,52 @@
 </head>
 <body>
     <header>
-		<img class="hero" src="images/stick.jpg" alt="stick-figure-family">
-        <a href="index.html" alt="home_page">
-            <img id="logo" src="images/optimized/Optimize Income-min.png" alt="logo">
-        </a>
-        <a href="" alt="home-page">Actual vs Standard</a>
+        <div class="title">
+            <a href="index.html" alt="home_page">
+                <img id="logo" src="images/optimized/Optimize Income-min.png" alt="logo">
+            </a>
+            <img class="hero" src="images/stick.jpg" alt="hero">
+            <div id="alt">
+                <a href="index.html">Mileage</a>
+            </div>
+        </div>
     </header>
     <main>
-			<img src="images/stick.jpg" alt="stick-figure-family">
-			<p>Each state has benefits for those in need of them. While each state varies, 
-			most will base your eligibility by gross income and household-size. This may include Medicaid, 
+			<p>Each state has benefits for those in need of them.<br>While each state varies, 
+			most will base your eligibility by gross income and household-size.<br>This may include Medicaid, 
 			SNAP, Child-Care Services, WIC, and others.</p>
-			<p>Here is a sample chart from Idaho with income limits for Medicaid</p>
-			<img src="images/medicaidChart.png">
+			<h2>Here is a sample chart from Idaho with income limits for Medicaid</h2>
+			<img src="images/medicaidChart.png" alt="medicaidChart" id="medicaidChart">
 			<p>Calculate your net income here and see if you are eligible!</p>
-			<p>(Form here)</p>
+			<form id="medicaid">
+                <p>Please enter data in a per month format!</p>
+                <label for='se-income'>Self-Employed Income: $</label>
+                <input type="number" id="se-income" name="se-income" required/>
+                <hr>
+                <label for='paycheck-income'>Paycheck Income: $</label>
+                <input type="number" id="paycheck-income" name="paycheck-income" required>
+                <label for='other-income'>Other Income: $</label>
+                <input type="number" id="other-income" name="other-income" required/>
+                <hr>
+                <label for="vehicle-expenses">Vehicle Expenses: $</label>
+                <input type="number" id="vehicle-expenses" name="vehicle-expenses" required>
+                <label for="other-work-expenses">Other Work Expenses: $</label>
+                <input type="number" id="other-work-expenses" name="other-work-expenses" required>
+                <hr>
+                <label for="vehicle-use">Vehicle Work %: </label>
+                <input type="number" id="vehicle-use" name="vehicle-use" required placeholder="50%">
+                <hr>
+                <button type="button" id="button2" onclick="calcIncome()">Check your Income</button>
+                <hr>
+                <label for="resultINC">Income per Month</label>
+                <div id="resultINC" class="result">$$</div>
+            </form>
     </main>
     <footer>
-
+        <img id="logo" src="images/optimized/Optimize Income-min.png" alt="logo">
+        <p>For educational purposes only<br>
+            User assumes all responsibility for decisions made based on content found on this website<br>
+            Author: Joseph Tolley  &copy;2025</p>
     </footer>
 </body>
 </html>

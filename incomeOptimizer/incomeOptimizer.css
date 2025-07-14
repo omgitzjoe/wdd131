@@ -1,61 +1,140 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-:root {
-  --primary-color: #067406;
-  --secondary-color: #ffd700;
-  --accent1-color: #800080;
-  --accent2-color:#ff0000;
-  --heading-font: "Roboto";
-  --paragraph-font: 'Lora';
-  --headline-color-on-white: var(--primary-color);
-  --headline-color-on-color: white;
-  --paragraph-color-on-white: var(--primary-color);
-  --paragraph-color-on-color: white;
-  --paragraph-background-color: var(--primary-color);
-  --nav-link-color: var(--primary-color);
-  --nav-background-color: var(--secondary-color);
-  --nav-hover-link-color: white;
-  --nav-hover-background-color: var(--primary-color);
-}
-/*header stuff */
-
-#title{
-  padding: 2%;
-  display: grid;
-  max-width: 100%;
-  height:auto;
-  grid-template-columns: 1fr 3fr 1fr;
-  align-items: center;
-}
-#logo{
-    justify-self: center;
-    max-width: 90%;
-    height: auto;
-}
-.hero{
-    padding:3%;
-    justify-self: center;
-    position:absolute;
-    z-index: -1;
+    @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+    :root {
+    --primary-color: #067406;
+    --secondary-color: #ffd700;
+    --accent1-color: #800080;
+    --accent2-color:#ff0000;
+    --heading-font: "Roboto";
+    --paragraph-font: 'Lora';
+    --headline-color-on-white: var(--primary-color);
+    --headline-color-on-color: white;
+    --paragraph-color-on-white: var(--primary-color);
+    --paragraph-color-on-color: white;
+    --paragraph-background-color: var(--primary-color);
+    --nav-link-color: var(--primary-color);
+    --nav-background-color: var(--secondary-color);
+    --nav-hover-link-color: white;
+    --nav-hover-background-color: var(--primary-color);
+    }
+    /*header stuff */
+    .title{
+    padding-top: 1fr;
+    padding: 2%;
+    display: grid;
     max-width: 100%;
     height:auto;
-    display:flex;
+    grid-template-columns: 1fr 3fr 1fr;
+    align-items: center;
+    }
+    #logo{
+        justify-self: center;
+        max-width: 95%;
+        height: auto;
+        grid-column: 1;
+    }
+    .hero{
+        padding:3%;
+        justify-self: center;
+        max-width: 100%;
+        height:auto;
+    }
+    #alt{
+        font-size:x-large;
+        max-width:100%;
+        height:auto;
+        grid-column: 3;
+    }
+    a{
+            text-decoration: none;
+            color: #800080;
+    }
+    /*footer stuff*/
+    footer{
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        background-color: #800080;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        margin-top: 5%;
+    }
+    footer p{
+        grid-column:2;
+        font-size: larger;
+    }
+    /*main stuff*/
+    main{
+        display:block;
+        background-color: #800080;
+        justify-items: center;
+        padding:1%;
+    }
+    h2{
+        text-align: center;
+        color: #067406;
+        background-color: #ffd700;
+        font-size: xx-large;
+    }
+    p{
+        text-align: center;
+        color: #ffd700;
+        line-height: 1.6;
+        font-size: xx-large;
+    }
+    form{
+        display: block;
+        padding: 5%;
+        margin:5%;
+        align-items: center;
+        justify-items: center auto;
+        background-color: #067406;
+        border:solid;
+        border-color:#ff0000;
+        border-radius: .1em;
+        font-size: x-large;
+    }
+    hr{
+        height: .1em;
+        background-color: #ff0000;
+        margin: 1em 0;
+    }
+button{
+    justify-self: center;
 }
-#alt{
-    font-size:x-large;
-    max-width:100%;
-    height:auto;
-    grid-column: 3;
+.result{
+    display:block;
+    border: 2px solid var(--accent1-color);
+    background-color: white;
+    color: var(--primary-color);
+    width: 40%;
+    text-align: center;
+    font-size: larger;
 }
-/*main stuff*/
-#page{
-    justify-content: center;
-    align-content: center;
-    display: flexbox;
+button{
+    display:block;
+    text-align: center;
+    font-size: xx-large;
 }
-a{
-        text-decoration: none;
-        color: #800080;
-}
+/*index*/
 #example-images{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5%;
+}
+#example-images img{
     display:inline-block;
+    padding:1%;
+    height:17%;
+    width:17%;
+    border:solid #ff0000 2px;
+}
+/*benefits*/
+#medicaidChart{
+    display:block;
+    max-width:95%;
+    height: auto;
+}
+label{
+    color: #ffd700;
 }

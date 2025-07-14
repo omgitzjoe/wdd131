@@ -11,15 +11,14 @@
     <link rel="icon" type="image/webp" href="images/Optimize Income.png">
 </head>
 <body>
-<div id="page">
     <header>
-        <img class="hero" src="images/passenger-car.webp" alt="hero">
-        <div id="title">
+        <div class="title">
             <a href="index.html" alt="home_page">
                 <img id="logo" src="images/optimized/Optimize Income-min.png" alt="logo">
             </a>
+            <img class="hero" src="images/passenger-car.webp" alt="hero">
             <div id="alt">
-                <a href="benefits.html" alt="benefits-page">Benefits</a>
+                <a href="benefits.html">Benefits</a>
             </div>
         </div>
     </header>
@@ -29,17 +28,33 @@
         </h2>
         <div id="example-images">
             <img src="images/doordash.png" alt="doordash">
-            <img src="images/grubhub.png" alt="'grubhub">
-            <img src="images/instacart.png" alt="instacart">
+            <img src="images/grubhub.png" alt="grubhub">
             <img src="images/spark.jpg" alt="spark">
             <img src="images/uber.png" alt="uber">
+            <img src="images/instacart.png" alt="instacart">
         </div>
             <p>Then you know how important it is to get the most out of your car, including tax returns!</p>
             <p>If you track your mileage and track your expenses, this site is for you</p>
             <p>Simply fill out the form below to see whether you should file for Standard Deduction
             or by Actual Expenses, the difference may make or break your bank account!
             </p>
-            <form>
+            <form id="miles">
+                <label for='totalMiles'>Total Miles</label>
+                <input type="number" id="totalMiles" name="totalMiles" required/>
+                <label for='workMiles'>Work Miles</label>
+                <input type="number" id="workMiles" name="workMiles" required/>
+                <hr>
+                <label for="estimate">Estimated Vehicle Expenses: $</label>
+                <input type="number" id="estimate" name="estimate" required/>
+                <hr>
+                <button type="button" id="button1" onclick="calcMileage()">Check Deduction</button>
+                <hr>
+                <label for="resultS">Standard:</label>
+                <div id="resultS" class="result">0.00</div>
+                <label for="resultA">Actual:</label>
+                <div id="resultA" class="result">0.00</div>
+                <label for="workPercent">Work Percentage</label>
+                <div id="workPercent" class="result"></div>
             </form>
             <p>If you also track your income, go ahead and follow the link to the next page 
             where we can help you see if you are entitled to benefits, your net income may be much lower 
@@ -47,8 +62,10 @@
             </p>
     </main>
     <footer>
-        
+        <img id="logo" src="images/optimized/Optimize Income-min.png" alt="logo">
+        <p>For educational purposes only<br>
+            User assumes all responsibility for decisions made based on content found on this website<br>
+            Author: Joseph Tolley &copy;2025</p>
     </footer>
-</div>
 </body>
 </html>

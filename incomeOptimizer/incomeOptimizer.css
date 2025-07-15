@@ -31,11 +31,14 @@
         max-width: 95%;
         height: auto;
         grid-column: 1;
+        border:#ff0000 solid 4px;
+        border-radius: 20px;
     }
     .hero{
         padding:3%;
         justify-self: center;
-        max-width: 100%;
+        max-width: 90%;
+        min-width: 75%;
         height:auto;
     }
     #alt{
@@ -56,7 +59,9 @@
         text-align: center;
         align-items: center;
         justify-content: center;
-        margin-top: 5%;
+        border: solid #ff0000 5px;
+        border-radius: 20px;
+        padding:2%;
     }
     footer p{
         grid-column:2;
@@ -68,6 +73,8 @@
         background-color: #800080;
         justify-items: center;
         padding:1%;
+        border-radius: 20px;
+        border:4px solid #ff0000;
     }
     h2{
         text-align: center;
@@ -83,14 +90,14 @@
     }
     form{
         display: block;
-        padding: 5%;
+        padding: 2%;
         margin:5%;
         align-items: center;
         justify-items: center auto;
         background-color: #067406;
         border:solid;
         border-color:#ff0000;
-        border-radius: .1em;
+        border-radius: 20px;
         font-size: x-large;
     }
     hr{
@@ -128,6 +135,7 @@ button{
     height:17%;
     width:17%;
     border:solid #ff0000 2px;
+    border-radius: 20px;
 }
 /*benefits*/
 #medicaidChart{

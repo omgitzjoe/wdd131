@@ -8,13 +8,13 @@
     <meta name="author" content="Joe Tolley" >
     <link rel="stylesheet" type="text/css" href="incomeOptimizer.css" >
     <script src="incomeOptimizer.js" defer></script>
-    <link rel="icon" type="image/webp" href="images/Optimize Income.png">
+    <link rel="icon" type="image/webp" href="images/optimized/Optimize-Income-min.png">
 </head>
 <body>
     <header>
         <div class="title">
-            <a href="index.html" alt="home_page">
-                <img id="logo" src="images/optimized/Optimize Income-min.png" alt="logo">
+            <a href="index.html">
+                <img class="logo" src="images/optimized/Optimize-Income-min.png" alt="home_page">
             </a>
             <img class="hero" src="images/stick.jpg" alt="hero">
             <div id="alt">
@@ -30,14 +30,15 @@
 			<img src="images/medicaidChart.png" alt="medicaidChart" id="medicaidChart">
 			<p>Calculate your net income here and see if you are eligible!</p>
 			<form id="medicaid">
-                <p>Please enter data in a per month format!</p>
+                <p>Please enter data in a per month format!<br>
+                (enter 0 for N/A)</p>
                 <label for='se-income'>Self-Employed Income: $</label>
-                <input type="number" id="se-income" name="se-income" required/>
+                <input type="number" id="se-income" name="se-income" required>
                 <hr>
                 <label for='paycheck-income'>Paycheck Income: $</label>
                 <input type="number" id="paycheck-income" name="paycheck-income" required>
                 <label for='other-income'>Other Income: $</label>
-                <input type="number" id="other-income" name="other-income" required/>
+                <input type="number" id="other-income" name="other-income" required>
                 <hr>
                 <label for="vehicle-expenses">Vehicle Expenses: $</label>
                 <input type="number" id="vehicle-expenses" name="vehicle-expenses" required>
@@ -54,7 +55,7 @@
             </form>
     </main>
     <footer>
-        <img id="logo" src="images/optimized/Optimize Income-min.png" alt="logo">
+        <img class="logo" src="images/optimized/Optimize-Income-min.png" alt="logo">
         <p>For educational purposes only<br>
             User assumes all responsibility for decisions made based on content found on this website<br>
             Author: Joseph Tolley  &copy;2025</p>

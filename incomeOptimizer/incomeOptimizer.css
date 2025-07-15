@@ -18,7 +18,6 @@
     }
     /*header stuff */
     .title{
-    padding-top: 1fr;
     padding: 2%;
     display: grid;
     max-width: 100%;
@@ -26,7 +25,7 @@
     grid-template-columns: 1fr 3fr 1fr;
     align-items: center;
     }
-    #logo{
+    .logo{
         justify-self: center;
         max-width: 95%;
         height: auto;
@@ -93,7 +92,6 @@
         padding: 2%;
         margin:5%;
         align-items: center;
-        justify-items: center auto;
         background-color: #067406;
         border:solid;
         border-color:#ff0000;
@@ -105,9 +103,6 @@
         background-color: #ff0000;
         margin: 1em 0;
     }
-button{
-    justify-self: center;
-}
 .result{
     display:block;
     border: 2px solid var(--accent1-color);
@@ -121,6 +116,7 @@ button{
     display:block;
     text-align: center;
     font-size: xx-large;
+    justify-self: center;
 }
 /*index*/
 #example-images{
@@ -142,6 +138,8 @@ button{
     display:block;
     max-width:95%;
     height: auto;
+    border:4px solid #ff0000;
+    border-radius: 20px;
 }
 label{
     color: #ffd700;
